@@ -55,9 +55,12 @@ func main() {
 	var edtLogView *walk.TextEdit
 	var btnStart, btnStop *walk.PushButton
 	var transfer *Transfer
+	cfg := NewConfig("config.json")
+	cfg.LoadConfig()
+
 	if err := (MainWindow{
 		AssignTo: &mw,
-		Title:    "Tcp Data Transfer  By:DingQi [Golang]",
+		Title:    "Tcp Data Transfer  By:ArcherDing [Golang]",
 		MinSize:  Size{450, 600},
 
 		Layout: VBox{},
@@ -70,28 +73,28 @@ func main() {
 					},
 					LineEdit{
 						AssignTo: &edtRemoteAddr,
-						Text:     "10.34.80.1",
+						Text:     cfg.RemoteAddr,
 					},
 					Label{
 						Text: "RemotePort:",
 					},
 					LineEdit{
 						AssignTo: &edtRemotePort,
-						Text:     "8020",
+						Text:     cfg.RemotePort,
 					},
 					Label{
 						Text: "LocalAddr:",
 					},
 					LineEdit{
 						AssignTo: &edtLocalAddr,
-						Text:     "0.0.0.0",
+						Text:     cfg.LocaleAddr,
 					},
 					Label{
 						Text: "LocalPort:",
 					},
 					LineEdit{
 						AssignTo: &edtLocalPort,
-						Text:     "8018",
+						Text:     cfg.LocalePort,
 					},
 
 					Label{

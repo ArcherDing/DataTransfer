@@ -1,6 +1,6 @@
 {
-	RemoteAddr:"10.34.80.1",
-	RemotePort:"8020",
-	LocaleAddr:"0.0.0.0",
-	LocalePort:"8014"
+	"RemoteAddr":"192.168.1.100",
+	"RemotePort":"8080",
+	"LocaleAddr":"0.0.0.0",
+	"LocalePort":"8014"
 }
